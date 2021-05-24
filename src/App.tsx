@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Header } from 'antd/lib/layout/layout';
+import 'antd/dist/antd.css';
 import './App.css';
+import UserList from './pages/UserList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header color="blue" className="App-Header">
+        <span className="App-Title">TM2</span>
+      </Header>
+
+      <div className="App-content">
+        <UserList />
+      </div>
     </div>
   );
 }
 
 export default App;
+
